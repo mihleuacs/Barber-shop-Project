@@ -1,4 +1,16 @@
-# Berbershop
+# Berbershop aplikacija
+Mojata zadaca za ovoj proekt shto go rabotev so kolegata Ognen Bozinov beshe da go napravam FrontEndot(layout) i delot so zakazuvanje rezervacii(reservation-add).
+Layout delot sodrži logo, meni za navigacija i dve kopčinja za rezervacii i administrativen pristap. Logoto ima link do početnata stranica.
+Menito za navigacija vklučuva linkovi za Doma, Meni, Časovi, Lokacija i Kontakt , dve kopčinja za pravenje rezervacii i navigacija do administratorskiot del.
+Toa e klasa na Angular komponent narečena HeaderComponent.
+Gi zema potrebnite moduli od Angular. Klasata ima konstruktor koj ja injektira uslugata Angular Router. Definirani se dva metodi: navigateToReservations i navigateToAdmin. navigateToReservations go koristi ruterot za navigacija do rutata „/rezervacii/dodaj“. navigateToAdmin go koristi ruterot za navigacija do rutata „/admin“.
+Reservation-add HTML-ot pokažuva formular za pravenje onlajn rezervacija so polinja za ime, prezime, datum, vreme i izbor na berber. Komponentata TypeScript se spravuva so logikata, prezemajki dostapni berberi pri inicijalizacija, podnesuvanje rezervacii i spravuvanje so odgovorite. Komponentata koristi dvonasočno vrzuvanje za podatoci na Angular ([(ngModel)]) za da gi povrze polinjata na formularot so svojstvata na objektot za rezervacija. Isto taka, koristi uslugi kako ReservationService i ToastService za da komunicira so zadninata i da prikažuva izvestuvanja.
+
+Poradi errori vo prakjanjeto na eden zaednicki kod reshivme i dvajcata da pratime posebno i da objasnime koj za shto pravel vo proektot,
+voedno vi blagoradam za odobruvanjeto shto ni dadovte da napravime grupen proekt.
+Pozdrav 
+Mihail Shapkarov 5185
+## Berbershop
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
