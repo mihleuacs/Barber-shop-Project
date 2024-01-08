@@ -1,0 +1,40 @@
+<div class="table-container">
+  <div *ngIf="isLoading; else content">
+    <div class="loader-overlay">
+      <mat-spinner id="loader" diameter="100" color="primary"></mat-spinner>
+    </div>
+  </div>
+  <ng-template #content>
+    <input type="text" placeholder="Search by name or berber" [(ngModel)]="searchTerm" (input)="applyFilter()"
+      class="search-input" />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Berber</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reservation of filteredReservations" [routerLink]="['/reservations', reservation.id]">
+          <td>{{ reservation.id }}</td>
+          <td>{{ reservation.date | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ reservation.date | date: 'hh:mm a' }}</td>
+          <td>{{ reservation.clientName }}</td>
+          <td>{{ reservation.clientSurname }}</td>
+          <td>{{ reservation.berber.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="filteredReservations.length === 0 && this.berberId">
+      <h2 style="color: white;">No reservations for this berber</h2>
+    </div>
+
+
+    <button (click)="goBack()" class="btn-back">Back</button>
+  </ng-template>
+</div>

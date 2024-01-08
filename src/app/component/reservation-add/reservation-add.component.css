@@ -1,0 +1,124 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+}
+
+.container {
+    background-image: linear-gradient(270deg, orange, transparent);
+    margin: 50px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.container-time {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 50px;
+    text-align: center;
+    border: 3px solid orange;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+}
+
+.heading {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.heading-days {
+    color: #fff;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.container-time:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.container-form {
+    padding: 50px;
+    margin: 50px;
+    background-color: rgba(255, 165, 0, 0.2);
+    border: 3px solid orange;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+}
+
+form {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.form-field {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select {
+    padding: 10px 15px;
+    border: 2px solid orange;
+    border-radius: 5px;
+    font-size: 16px;
+    width: calc(100% - 20px);
+}
+
+.container-form:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.container-form h2.heading {
+    color: #fff;
+    text-align: center;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+input[type="text"]:active,
+input[type="date"]:active,
+input[type="time"]:active,
+select:active {
+  border-color: darkorange;
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.3);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }

@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="container-time">
+        <h2 style="color: white;" class="heading">Time Open</h2>
+        <h3 class="heading-days">Monday - Friday</h3>
+        <p style="color: white;">10:00 - 22:00</p>
+        <h3 class="heading-days">Saturday</h3>
+        <p style="color: white;">10:00 - 18:00</p>
+        <h3 class="heading-days">Sunday</h3>
+        <p style="color: white;">Closed!</p>
+    </div>
+
+    <div class="container-form">
+        <form ngNativeValidate #form="ngForm" (ngSubmit)="submitReservation(form)">
+            <h2 class="heading">Reservation Online</h2>
+            <div class="form-field">
+                <p>Your Name</p>
+                <input style="border: groove;" required type="text" placeholder="Your name" [(ngModel)]="reservation.clientName" name="name">
+            </div>
+            <div class="form-field">
+                <p>Your Surname</p>
+                <input style="border: groove;" required type="text" placeholder="Your surname" [(ngModel)]="reservation.clientSurname" name="surname">
+            </div>
+            <div class="form-field">
+                <p>Date</p>
+                <input style="border: groove;" required type="date" name="selectedDate" ngModel>
+            </div>
+            <div class="form-field">
+                <p>Time</p>
+                <input style="border: groove;" required type="time" name="selectedTime" ngModel>
+            </div>
+            <div class="form-field">
+                <p>Who will cut your hair?</p>
+                <select style="border: groove;" required name="select" id="#" [(ngModel)]="reservation.berberId" name="berberId">
+                    <option *ngFor="let berber of berbers" [value]="berber.id">{{berber.name}}</option>
+                </select>
+            </div>
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+</div>

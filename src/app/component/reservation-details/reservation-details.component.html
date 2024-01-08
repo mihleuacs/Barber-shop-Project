@@ -1,0 +1,33 @@
+<div class="card-container">
+  <div class="card" *ngIf="reservation">
+    <div class="card-header">
+      Reservation Details
+    </div>
+    <div class="card-body">
+      <div class="detail">
+        <span class="label">ID:</span>
+        <span>{{ reservation.id }}</span>
+      </div>
+      <div class="detail">
+        <span class="label">Date:</span>
+        <span>{{ reservation.date | date: 'dd/MM/yyyy' }}</span>
+      </div>
+      <div class="detail">
+        <span class="label">Time:</span>
+        <span>{{ reservation.date | date: 'hh:mm a' }}</span>
+      </div>
+      <div class="detail">
+        <span class="label">Name:</span>
+        <span>{{ reservation.clientName }}</span>
+      </div>
+      <div class="detail">
+        <span class="label">Surname:</span>
+        <span>{{ reservation.clientSurname }}</span>
+      </div>
+      <div class="detail">
+        <span class="label">Berber:</span>
+        <span>{{ reservation.berber.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>

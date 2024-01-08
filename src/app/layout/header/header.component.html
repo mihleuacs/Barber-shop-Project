@@ -1,0 +1,21 @@
+<header>
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/images/logo.jpg" alt="logo">
+    </a>
+  </div>
+  <nav>
+    <ul>
+
+      <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+      <li><a href="#pricelist">Menu</a></li>
+      <li><a href="#workinghours">Working Hours</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#contacts">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="buttons">
+    <button class="reservation-button" (click)="navigateToReservations()">Reservation</button>
+    <button class="admin-button" (click)="navigateToAdmin()">Go To Admin</button>
+  </div>
+</header>

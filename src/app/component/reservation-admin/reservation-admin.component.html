@@ -1,0 +1,29 @@
+<div class="admin-container">
+    <h1>Welcome Admin</h1>
+    <div class="add-berber">
+        <h2>Add New Berber</h2>
+        <form id="addBerberForm" ngNativeValidate #form="ngForm" (ngSubmit)="addNewBerber()">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required [(ngModel)]="newBerber.name"><br>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required [(ngModel)]="newBerber.surname"><br>
+
+            <button class="add-btn" type="submit">Add Berber</button>
+        </form>
+    </div>
+
+    <div class="existing-berbers">
+        <h2>Existing Berbers</h2>
+        <ul id="berberList">
+            <li class="berberName" *ngFor="let berber of berbers" >
+                <button  (click)="onBerberClick(berber.id!)" >{{ berber.name }} {{ berber.surname }}</button>
+                <button *ngIf="berber.id" class="delete-btn" (click)="deleteBerber(berber.id!)">Delete</button>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <button class="primary-btn-admin" type="submit" (click)="redirectToReservations()" >Go To All Reservations</button>
+    </div>
+</div>

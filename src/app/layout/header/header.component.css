@@ -1,0 +1,82 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: arial;
+}
+header{
+  width: 1520px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-image: black;
+  
+}
+.logo{
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+nav li{
+  display: inline-block;
+  list-style: none;
+  padding: 0px 20px;
+}
+a,button{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.4s ease;
+}
+
+button:hover
+{
+  background-color: #E48F45;
+  transition: all 0.4s ease 0s;
+}
+nav li a:hover{
+  color: #F5CCA0;
+  transition: all 0.4s ease 0s;
+}
+img
+{
+  width: 150px;
+  height: 100px;
+}
+.reservation-button {
+  background-color: #6B240C;
+  margin-right: 10px;
+}
+
+.reservation-button:hover {
+  background-color: #E48F45;
+}
+
+.admin-button {
+  background-color: #1E2D55;
+  padding: 12px 25px;
+  margin-left: 10px;
+}
+
+.admin-button:hover {
+  background-color: #3858A2;
+}
+
+.reservation-button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.admin-button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}

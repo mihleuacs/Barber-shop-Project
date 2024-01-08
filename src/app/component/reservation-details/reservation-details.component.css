@@ -1,0 +1,42 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-header {
+  background-color: #f27e2d;
+  color: white;
+  font-weight: bold;
+  padding: 18px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.detail {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 12px;
+  color: #555;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
